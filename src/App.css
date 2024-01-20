@@ -1,39 +1,238 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
+
+.navbar {
+    background-color: #3D30A2;
+    color: white;
+    padding: 10px;
+    
   }
+  
+  h3 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 18px;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  
+  h1{
+    color: #FFA33C;
+  }
+
+  
+
+/* Table */
+table {
+  width: 90%;
+  border-collapse: collapse;
+  margin: 40px;
+  font-family: Arial, sans-serif;
+  border: 1px solid #ddd;
 }
 
-.App-header {
-  min-height: 100vh;
+th, td {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #B15EFF;
+}
+
+
+button {
+  padding: 5px 10px;
+  background-color: #FFA33C;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+button:hover {
+  background-color: #f39427;
+}
+
+
+td button:last-child {
+  margin-right: 0;
+}
+
+.add-student-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+
+.form-group {
+  margin: 10px;
+}
+
+.form-group input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.teacher-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+
+.teacher-input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.teacher-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.teacher-button:hover {
+  background-color: #0056b3;
+}
+.flash-card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 300px;
+  padding: 16px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: auto;
+}
+
+.profile-picture img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.student-info {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 0;
+  color: #333;
+}
+
+.flash-card p {
+  font-size: 24px;
+  margin: 8px 0;
+  color: #666;
+}
+
+.data {
+  width: 200px;
+  height: 200px;
+  background-color: #fff; 
+  border: 5px solid #B15EFF; 
+  box-shadow: 5px 5px 10px #0000004d; 
+  margin: 20px;
+  text-align: center;
+   display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+ 
+
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+.data-cards{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  
+  
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.data:hover {
+  transform: translate(5px, 5px); }
+.num-value{
+  font-size: 50px;
+  color: #FFA33C;
+}
+
+
+.container {
+  min-height: 100%;
+  position: relative;
+}
+
+.footer {
+  background-color: #FFFB73;
+  color: #3D30A2;
+  text-align: center;
+  padding: 10px 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+
+.footer a {
+  color: #3D30A2;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
 }

@@ -1,56 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
 import './App.css';
+import { Link, Route, Routes } from 'react-router-dom';
+import { Student } from './pages/Students';
+import { Teachers } from './pages/Teachers';
+import { IndividualTeacher } from './pages/IndividualTeacher';
+import { IndividualStudent } from './pages/IndividualStudent';
+import { Home } from './pages/Home';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+
+<nav className="navbar">
+      <h3>School Management System</h3>
+      <Link to="/" className="nav-link">Home</Link>
+      <Link to="/students" className="nav-link">Students</Link>
+      <Link to="/teachers" className="nav-link">Teachers</Link>
+    </nav>
+
+    
+
+
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/students" element={<Student />} />
+      <Route path="/teachers" element={<Teachers />} />
+
+      <Route path="/students/:studentId" element={<IndividualStudent />} />
+<Route path="/teachers/:teacherId" element={<IndividualTeacher />} />
+
+    </Routes>
+    
     </div>
   );
 }
