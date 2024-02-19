@@ -7,7 +7,7 @@ export const fetchTeachers = createAsyncThunk(
   'events/fetchTeachers',
   async () => {
     try {
-      const response = await fetch('https://5a1ece93-aa90-49b4-a19b-b3af704a6f63-00-2jejhrwamybei.riker.replit.dev/teachers');
+      const response = await fetch('https://school-management-backend-eight.vercel.app/teachers');
       const data = await response.json();
       console.log(data);
       return data.data;  
@@ -24,7 +24,7 @@ export const addTeacher = createAsyncThunk(
     try {
       console.log(TeacherData);
 
-      const response = await fetch('https://5a1ece93-aa90-49b4-a19b-b3af704a6f63-00-2jejhrwamybei.riker.replit.dev/teachers', {
+      const response = await fetch('https://school-management-backend-eight.vercel.app/teachers', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ export const deleteTeacher = createAsyncThunk(
     try {
       console.log(teacherId);
 
-      const response = await fetch(`https://5a1ece93-aa90-49b4-a19b-b3af704a6f63-00-2jejhrwamybei.riker.replit.dev/teachers/${teacherId}`, {
+      const response = await fetch(`https://school-management-backend-eight.vercel.app/teachers/${teacherId}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -79,7 +79,7 @@ export const editTeacher = createAsyncThunk(
     try {
       const teacherId = updatedTeacher._id;
 
-      const response = await fetch(`https://5a1ece93-aa90-49b4-a19b-b3af704a6f63-00-2jejhrwamybei.riker.replit.dev/teachers/${teacherId}`, {
+      const response = await fetch(`https://school-management-backend-eight.vercel.app/teachers/${teacherId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
