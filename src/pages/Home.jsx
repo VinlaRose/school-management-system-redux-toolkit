@@ -45,7 +45,7 @@ export const Home = () => {
           <h2>Average marks</h2>
           <div className="num-value">
             {students.length > 0
-              ? students.reduce((total, student) => total + student.marks, 0) / students.length
+              ? (students.reduce((total, student) => total + student.marks, 0) / students.length).toFixed(2)
               : 0}
           </div>
         </div>
@@ -53,7 +53,7 @@ export const Home = () => {
           <h2>Average Attendance</h2>
           <div className="num-value">
             {students.length > 0
-              ? students.reduce((total, student) => total + student.attendance, 0) / students.length
+              ? (students.reduce((total, student) => total + student.attendance, 0) / students.length).toFixed(2)
               : 0}
           </div>
         </div>
