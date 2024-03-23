@@ -76,11 +76,12 @@ export const deleteStudent = createAsyncThunk(
 export const editStudent = createAsyncThunk(
   'students/editStudent',
   async (updatedStudent, { dispatch }) => {
+    console.log(updatedStudent)
     try {
       const studentId = updatedStudent._id;
 
       const response = await fetch(`https://school-management-backend-eight.vercel.app/students/${studentId}`, {
-        method: 'POST',
+        method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
         },
@@ -88,15 +89,16 @@ export const editStudent = createAsyncThunk(
       });
 
       if (!response.ok) {
+        console.log(response)
         throw new Error('Failed to edit student');
       }
-
+      console.log(response)
       const editedStudent = await response.json();
       console.log(editedStudent);
-      return editedStudent.data;  // Return the data instead of dispatching an action here
+      return editedStudent.data;  
     } catch (error) {
       console.error('Error editing event:', error);
-      throw error;  // Throw the error to let createAsyncThunk handle the failure action
+      throw error;  
     }
   }
 );

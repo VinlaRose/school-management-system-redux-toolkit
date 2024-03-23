@@ -80,7 +80,7 @@ export const editTeacher = createAsyncThunk(
       const teacherId = updatedTeacher._id;
 
       const response = await fetch(`https://school-management-backend-eight.vercel.app/teachers/${teacherId}`, {
-        method: 'POST',
+        method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
         },
